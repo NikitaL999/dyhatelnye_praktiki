@@ -60,6 +60,14 @@
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1142512237655627');
       fbq('track', 'PageView');
+        document.addEventListener("DOMContentLoaded", function() {
+    var btn = document.querySelector(".btn"); 
+    if (btn) {
+        btn.addEventListener("click", function() {
+            fbq('track', 'Lead'); // Фиксируем лид при клике
+        });
+    }
+});
     </script>
 </head>
 <body>
